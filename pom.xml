@@ -13,9 +13,7 @@
   </licenses>
 
   <properties>
-    <java.version>21</java.version>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
+    <java.version>25</java.version>
 
     <module_name>mod-organizations-storage</module_name>
     <http.port>8081</http.port>
@@ -30,6 +28,7 @@
     <vertx.version>5.1.0</vertx.version>
     <log4j.version>2.26.0</log4j.version>
     <aspectj.version>1.9.25.1</aspectj.version>
+    <lombok.version>1.18.44</lombok.version>
     <jackson-bom.version>2.21.4</jackson-bom.version>
 
     <!--Folio dependencies properties-->
@@ -189,6 +188,13 @@
         <configuration>
           <release>${java.version}</release>
           <encoding>UTF-8</encoding>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+          </annotationProcessorPaths>
         </configuration>
       </plugin>
 
